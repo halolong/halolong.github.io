@@ -1,712 +1,303 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Clark Long&#39;s Tech Blog">
 <meta property="og:url" content="http://example.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="Clark Long&#39;s Tech Blog">
+<meta property="og:locale">
+<meta property="article:author" content="Clark">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Clark Long&#39;s Tech Blog</title>
+    <!-- styles -->
+    
 <link rel="stylesheet" href="/css/style.css">
 
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
 <meta name="generator" content="Hexo 5.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4">
+        
+          <header id="header">
+  <a href="/">
+  
+    
+      <div id="logo" style="background-image: url(/images/logo.png);"></div>
+    
+  
+    <div id="title">
+      <h1>Clark Long&#39;s Tech Blog</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">Home</a></li>
+       
+        <li><a href="/archives/">Writing</a></li>
+       
+        <li><a href="/about/">About</a></li>
+       
+        <li><a href="/other/">Other</a></li>
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
+    </ul>
   </div>
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-1382-balance-a-binary-search-tree" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/15/1382-balance-a-binary-search-tree/" class="article-date">
-  <time datetime="2020-03-15T18:07:32.000Z" itemprop="datePublished">2020-03-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+
         
+        <section id="about">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/15/1382-balance-a-binary-search-tree/">LeetCode 1382. Balance a Binary Search Tree</a>
-    </h1>
   
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given a binary search tree, return a <strong>balanced</strong> binary search tree with the same node values.</p>
-<p>A binary search tree is <em>balanced</em> if and only if the depth of the two subtrees of every node never differ by more than 1.</p>
-<p>If there is more than one answer, return any of them.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root &#x3D; [1,null,2,null,3,null,4,null,null]</span><br><span class="line">Output: [2,1,3,null,null,null,4]</span><br><span class="line">Explanation: This is not the only correct answer, [3,1,4,null,2,null,null] is also correct.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>先中序遍历得到有序的序列，然后构建BST。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(n) space:O(n)</span></span><br><span class="line">List&lt;Integer&gt; list;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">balanceBST</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        dfs(root);</span><br><span class="line">        <span class="keyword">return</span> build(list, <span class="number">0</span>, list.size() - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        dfs(root.left);</span><br><span class="line">        list.add(root.val);</span><br><span class="line">        dfs(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">build</span><span class="params">(List&lt;Integer&gt; list, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left &gt; right) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(list.get(mid));</span><br><span class="line">        root.left = build(list, left, mid - <span class="number">1</span>);</span><br><span class="line">        root.right = build(list, mid + <span class="number">1</span>, right);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/15/1382-balance-a-binary-search-tree/" data-id="cki58ajr7001eodw4b1htauxa" class="article-share-link">Share</a>
+    <p>
+      Find me on
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BST/" rel="tag">BST</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/" rel="tag">Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1381-design-a-stack-with-increment-operation" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/15/1381-design-a-stack-with-increment-operation/" class="article-date">
-  <time datetime="2020-03-15T15:37:50.000Z" itemprop="datePublished">2020-03-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/15/1381-design-a-stack-with-increment-operation/">LeetCode 1381. Design a Stack With Increment Operation</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Design a stack which supports the following operations.</p>
-<p>Implement the <code>CustomStack</code> class:</p>
-<ul>
-<li><code>CustomStack(int maxSize)</code> Initializes the object with <code>maxSize</code> which is the maximum number of elements in the stack or do nothing if the stack reached the <code>maxSize</code>.</li>
-<li><code>void push(int x)</code> Adds <code>x</code> to the top of the stack if the stack hasn’t reached the <code>maxSize</code>.</li>
-<li><code>int pop()</code> Pops and returns the top of stack or <strong>-1</strong> if the stack is empty.</li>
-<li><code>void inc(int k, int val)</code> Increments the bottom <code>k</code> elements of the stack by <code>val</code>. If there are less than <code>k</code> elements in the stack, just increment all the elements in the stack.</li>
-</ul>
-<p><strong>Constraints:</strong></p>
-<ul>
-<li><code>1 &lt;= maxSize &lt;= 1000</code></li>
-<li><code>1 &lt;= x &lt;= 1000</code></li>
-<li><code>1 &lt;= k &lt;= 1000</code></li>
-<li><code>0 &lt;= val &lt;= 100</code></li>
-<li>At most <code>1000</code> calls will be made to each method of <code>increment</code>, <code>push</code> and <code>pop</code> each separately.</li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p> <strong>inc</strong>操作是这个题的重点，如果采取常用的栈操作，需要弹出再放入，降低其时间复杂度。</p>
-<ul>
-<li>Solution1: 在比赛中，我看见如上的参数限制，所以我想到使用基于数组的栈，这样在进行<strong>inc</strong>，只需要从头开始加。</li>
-<li>Solution2: 参考了<a target="_blank" rel="noopener" href="https://leetcode.com/problems/design-a-stack-with-increment-operation/discuss/539716/JavaC%2B%2BPython-Lazy-increment-O(1)">Lee215</a>大佬的解法后发现，思路更加妙。依然采取栈，但是需要一个数组来记录每次加的数，并且放在最高位，每次需要pop的时候， 就依次往前面计算。真的很妙！</li>
-</ul>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(n) space:O(n)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] arr;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> size;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> max;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">_1381_DesignaStackWithIncrementOperation</span><span class="params">(<span class="keyword">int</span> maxSize)</span> </span>&#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        max = maxSize;</span><br><span class="line">        arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1001</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (size &lt; max) &#123;</span><br><span class="line">            arr[size++] = x;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (size &lt; <span class="number">1</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> res = arr[size - <span class="number">1</span>];</span><br><span class="line">        size--;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">increment</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> j = k &lt; size ? k : size;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; j; i++) &#123;</span><br><span class="line">            arr[i] += val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// time: O(1) space:O(n) </span></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span>[] inc;</span><br><span class="line">    Stack&lt;Integer&gt; stack;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CustomStack</span><span class="params">(<span class="keyword">int</span> maxSize)</span> </span>&#123;</span><br><span class="line">        n = maxSize;</span><br><span class="line">        inc = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (stack.size() &lt; n) &#123;</span><br><span class="line">            stack.push(x);</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = stack.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span>)  <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (i &gt; <span class="number">0</span>) inc[i - <span class="number">1</span>] += inc[i];</span><br><span class="line">        <span class="keyword">int</span> res = stack.pop() + inc[i];</span><br><span class="line">        inc[i] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">increment</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = Math.min(k, stack.size()) - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (i &gt;= <span class="number">0</span>) </span><br><span class="line">            inc[i] += val;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/design-a-stack-with-increment-operation/discuss/539716/JavaC%2B%2BPython-Lazy-increment-O(1)">https://leetcode.com/problems/design-a-stack-with-increment-operation/discuss/539716/JavaC%2B%2BPython-Lazy-increment-O(1)</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/15/1381-design-a-stack-with-increment-operation/" data-id="cki58ajr6001bodw445jke2xf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Matrix/" rel="tag">Matrix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1380-lucky-numbers-in-a-matrix" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/15/1380-lucky-numbers-in-a-matrix/" class="article-date">
-  <time datetime="2020-03-15T15:19:20.000Z" itemprop="datePublished">2020-03-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="https://github.com/xingyu-long">
+            <i class="fab fa-github"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/15/1380-lucky-numbers-in-a-matrix/">LeetCode 1380. Lucky Numbers in a Matrix</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given a <code>m * n</code> matrix of <strong>distinct</strong> numbers, return all lucky numbers in the matrix in <strong>any</strong> order.</p>
-<p>A lucky number is an element of the matrix such that it is the minimum element in its row and maximum in its column.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: matrix &#x3D; [[3,7,8],[9,11,13],[15,16,17]]</span><br><span class="line">Output: [15]</span><br><span class="line">Explanation: 15 is the only lucky number since it is the minimum in its row and the maximum in its column</span><br><span class="line"></span><br><span class="line">Input: matrix &#x3D; [[1,10,4,2],[9,3,8,7],[15,16,17,12]]</span><br><span class="line">Output: [12]</span><br><span class="line">Explanation: 12 is the only lucky number since it is the minimum in its row and the maximum in its column.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>一开始想到到的就是暴力解法，搜索每一个数是否符合这样的限制，但是发现这样应该是<code>m^2 * n^2</code>的时间复杂度，因为需要遍历每个元素并且同时遍历当前行和列。但是根据观察发现，我们只需要每行的最小值以及每列的最大值，这样就想到可以先求其中一个然后看交集，如果存在则符合这样的要求。这样只需要遍历matrix每个元素一遍。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(mn) space:O(m)</span></span><br><span class="line">    <span class="comment">// set intersection</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">luckyNumbers</span> <span class="params">(<span class="keyword">int</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (matrix == <span class="keyword">null</span> || matrix.length == <span class="number">0</span> || matrix[<span class="number">0</span>] == <span class="keyword">null</span> || matrix[<span class="number">0</span>].length == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        HashSet&lt;Integer&gt; minOfRows = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] row : matrix) &#123;</span><br><span class="line">            <span class="keyword">int</span> min = row[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> n : row) &#123;</span><br><span class="line">                min = Math.min(min, n);</span><br><span class="line">            &#125;</span><br><span class="line">            minOfRows.add(min);</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">int</span> m = matrix.length;</span><br><span class="line">        <span class="keyword">int</span> n = matrix[<span class="number">0</span>].length;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> max = matrix[<span class="number">0</span>][j];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">                max = Math.max(max, matrix[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (minOfRows.contains(max)) res.add(max);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/15/1380-lucky-numbers-in-a-matrix/" data-id="cki58ajr40019odw40vk87435" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Easy/" rel="tag">Easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Matrix/" rel="tag">Matrix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-123-best-time-to-buy-and-sell-stock-iii" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/12/123-best-time-to-buy-and-sell-stock-iii/" class="article-date">
-  <time datetime="2020-03-13T02:24:39.000Z" itemprop="datePublished">2020-03-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/12/123-best-time-to-buy-and-sell-stock-iii/">LeetCode 123. Best Time to Buy and Sell Stock III</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Say you have an array for which the <em>i</em>th element is the price of a given stock on day <em>i</em>.</p>
-<p>Design an algorithm to find the maximum profit. You may complete at most <em>two</em> transactions.</p>
-<p><strong>Note:</strong> You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,3,5,0,0,3,1,4]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: Buy on day 4 (price &#x3D; 0) and sell on day 6 (price &#x3D; 3), profit &#x3D; 3-0 &#x3D; 3. Then buy on day 7 (price &#x3D; 1) and sell on day 8 (price &#x3D; 4), profit &#x3D; 4-1 &#x3D; 3.</span><br><span class="line">             </span><br><span class="line">             </span><br><span class="line">Input: [1,2,3,4,5]</span><br><span class="line">Output: 4</span><br><span class="line">Explanation: Buy on day 1 (price &#x3D; 1) and sell on day 5 (price &#x3D; 5), profit &#x3D; 5-1 &#x3D; 4. Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ul>
-<li><p>state: dp[ t + 1 ] [ days ] 表示进行t次交易后最大能获得的收益。</p>
-</li>
-<li><p>init: 均为0。</p>
-</li>
-<li><p>func: </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; j; k++) &#123;</span><br><span class="line">  max = Math.max(max, prices[j] - prices[k] + dp[i - <span class="number">1</span>][k]); <span class="comment">// 看第k天买入，j天卖出。并且需要加上上次交易k天剩下的钱</span></span><br><span class="line">&#125;</span><br><span class="line">dp[i][j] = Math.max(max, dp[i][j - <span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>res: dp[ t ] [ days - 1]</p>
-</li>
-</ul>
-<p>通过上面的观察发现，我们需要追踪选择哪个k的情况下，我们可以获得最大的利益，具体可以看下面的代码。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(kNM) space:O(m*n)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (prices == <span class="keyword">null</span> || prices.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> days = prices.length;</span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[t + <span class="number">1</span>][days];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; t + <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; days; j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; j; k++) &#123;</span><br><span class="line">                    max = Math.max(max, prices[j] - prices[k] + dp[i - <span class="number">1</span>][k]);</span><br><span class="line">                &#125;</span><br><span class="line">                dp[i][j] = Math.max(max, dp[i][j - <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[t][days - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// O(M*N) space:O(M*N)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit2</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (prices == <span class="keyword">null</span> || prices.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> m = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> n = prices.length;</span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[m + <span class="number">1</span>][n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> maxDiff = -prices[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">                dp[i][j] = Math.max(dp[i][j - <span class="number">1</span>], prices[j] + maxDiff);</span><br><span class="line">                maxDiff = Math.max(maxDiff, dp[i - <span class="number">1</span>][j] - prices[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[m][n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=oDhu5uGq_ic">https://www.youtube.com/watch?v=oDhu5uGq_ic</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/12/123-best-time-to-buy-and-sell-stock-iii/" data-id="cki58ajqd0004odw49pfy1bji" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hard/" rel="tag">Hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-376-wiggle-subsequence" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/11/376-wiggle-subsequence/" class="article-date">
-  <time datetime="2020-03-12T01:28:06.000Z" itemprop="datePublished">2020-03-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="https://twitter.com/xingyu_long">
+            <i class="fab fa-twitter"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/11/376-wiggle-subsequence/">LeetCode 376. Wiggle Subsequence</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>A sequence of numbers is called a <strong>wiggle sequence</strong> if the differences between successive numbers strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with fewer than two elements is trivially a wiggle sequence.</p>
-<p>For example, <code>[1,7,4,9,2,5]</code> is a wiggle sequence because the differences <code>(6,-3,5,-7,3)</code> are alternately positive and negative. In contrast, <code>[1,4,7,2,5]</code> and <code>[1,7,4,5,5]</code> are not wiggle sequences, the first because its first two differences are positive and the second because its last difference is zero.</p>
-<p>Given a sequence of integers, return the length of the longest subsequence that is a wiggle sequence. A subsequence is obtained by deleting some number of elements (eventually, also zero) from the original sequence, leaving the remaining elements in their original order.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,7,4,9,2,5]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: The entire sequence is a wiggle sequence.</span><br><span class="line"></span><br><span class="line">Input: [1,17,5,10,13,15,10,5,16,8]</span><br><span class="line">Output: 7</span><br><span class="line">Explanation: There are several subsequences that achieve this length. One is [1,17,10,13,10,16,8].</span><br><span class="line"></span><br><span class="line">Input: [1,2,3,4,5,6,7,8,9]</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>该题使用两个一维数组保持状态，分别是当前值和前面的值相差为正和负的两种情况。</p>
-<ul>
-<li>Solution 1: 从第二个元素开始遍历，中间使用一个for loop来遍历在i之前的数看在那个点操作获取最大值（这和longest increasing subsequence一样的思路）。如果当前元素比前面的大，可以表示为<code>up[i] = Math.max(up[i], down[j] + 1);</code>相反，<code>down[i] = Math.max(down[i], up[j] + 1);</code> 相同的话就保持前面的值即可。</li>
-<li>Solution 2: 依然按照上面的的思路，但是我们每一次进行更新的时候可以将UP以及DOWN数组都更新，而不需要返回来去比较寻找。这样可以优化到<code>O(n)</code>。</li>
-</ul>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(n^2) space: O(n)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">wiggleMaxLength</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span>[] up = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">int</span>[] down = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        up[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        down[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 这个题就类似于求longest increasing subsequences.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] &gt; nums[j]) &#123;</span><br><span class="line">                    up[i] = Math.max(up[i], down[j] + <span class="number">1</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[i] &lt; nums[j]) &#123;</span><br><span class="line">                    down[i] = Math.max(down[i], up[j] + <span class="number">1</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    up[i] = up[i - <span class="number">1</span>];</span><br><span class="line">                    down[i] = down[i - <span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(up[n - <span class="number">1</span>], down[n - <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// time:O(n) space:O(n)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">wiggleMaxLength2</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span>[] up = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">int</span>[] down = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        up[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        down[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] &gt; nums[i - <span class="number">1</span>]) &#123; <span class="comment">// up</span></span><br><span class="line">                up[i] = down[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">                down[i] = down[i - <span class="number">1</span>];</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[i] &lt; nums[i - <span class="number">1</span>]) &#123; <span class="comment">// down</span></span><br><span class="line">                down[i] = up[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">                up[i] = up[i - <span class="number">1</span>];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                down[i] = down[i - <span class="number">1</span>];</span><br><span class="line">                up[i] = up[i - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(down[n - <span class="number">1</span>], up[n - <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// time:O(n) space:O(1) 优化空间，因为只是依赖前后的值</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">wiggleMaxLength3</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span> up = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> down = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] &gt; nums[i - <span class="number">1</span>]) &#123; <span class="comment">// up</span></span><br><span class="line">                up = down + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[i] &lt; nums[i - <span class="number">1</span>]) &#123; <span class="comment">// down</span></span><br><span class="line">                down = up + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(down, up);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/grandyang/p/5697621.html">https://www.cnblogs.com/grandyang/p/5697621.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/11/376-wiggle-subsequence/" data-id="cki58ajri0024odw48l51bi00" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-337-house-robber-iii" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/10/337-house-robber-iii/" class="article-date">
-  <time datetime="2020-03-11T02:08:22.000Z" itemprop="datePublished">2020-03-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/10/337-house-robber-iii/">LeetCode 337. House Robber III</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>The thief has found himself a new place for his thievery again. There is only one entrance to this area, called the “root.” Besides the root, each house has one and only one parent house. After a tour, the smart thief realized that “all houses in this place forms a binary tree”. It will automatically contact the police if two directly-linked houses were broken into on the same night.</p>
-<p>Determine the maximum amount of money the thief can rob tonight without alerting the police.33</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,2,3,null,3,null,1]</span><br><span class="line"></span><br><span class="line">     *3</span><br><span class="line">    &#x2F; \</span><br><span class="line">   2   3</span><br><span class="line">    \   \ </span><br><span class="line">    *3   *1</span><br><span class="line"></span><br><span class="line">Output: 7 </span><br><span class="line">Explanation: Maximum amount of money the thief can rob &#x3D; 3 + 3 + 1 &#x3D; 7.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Input: [3,4,5,1,3,null,1]</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    &#x2F; \</span><br><span class="line">  *4   *5</span><br><span class="line">  &#x2F; \   \ </span><br><span class="line"> 1   3   1</span><br><span class="line"></span><br><span class="line">Output: 9</span><br><span class="line">Explanation: Maximum amount of money the thief can rob &#x3D; 4 + 5 &#x3D; 9.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>因为这是一个tree的问题，所以首先想到的应该是用递归的方法解决。</p>
-<ul>
-<li>Solution1：这个问题与之前的i和ii没有太大区别，都是当前被偷之后，邻接的下一层无法被选择。假设我选择当前这一层，那么我可以选择递归调用下下层的所有节点，即<code>root.left.left, root.left.right, root.right.left, root.right.left</code>，然后让当前选择的值加上其下下层的值与取下一层的递归值进行比较。其中，我们采取HashMap进行缓存优化。</li>
-<li>Solution2：依然是采取递归的思路，设置返回值为二维数组，其中第0个位置代表不抢当前值，第1个位置表示抢当前值。计算的过程中，我们采取后序遍历，对于左右子树返回的值进行处理，情况和上面一致。</li>
-</ul>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; DP + Memo.</span><br><span class="line">    public static int rob(TreeNode root) &#123;</span><br><span class="line">        if (root &#x3D;&#x3D; null) return 0;</span><br><span class="line">        HashMap&lt;TreeNode, Integer&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        return helper(root, map);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; time:O(n) space:O(n)</span><br><span class="line">    public static int helper(TreeNode root, HashMap&lt;TreeNode, Integer&gt; map) &#123;</span><br><span class="line">        if (map.get(root) !&#x3D; null) return map.get(root);</span><br><span class="line">        if (root &#x3D;&#x3D; null) return 0;</span><br><span class="line">        int sumOfChose &#x3D; 0;</span><br><span class="line">        if (root.left !&#x3D; null) &#123;</span><br><span class="line">            sumOfChose +&#x3D; helper(root.left.left, map) + helper(root.left.right, map);</span><br><span class="line">        &#125;</span><br><span class="line">        if (root.right !&#x3D; null) &#123;</span><br><span class="line">            sumOfChose +&#x3D; helper(root.right.left, map) + helper(root.right.right, map);</span><br><span class="line">        &#125;</span><br><span class="line">        sumOfChose +&#x3D; root.val;</span><br><span class="line">        int sumOfNotChose &#x3D; helper(root.left, map) + helper(root.right, map);</span><br><span class="line">        int res &#x3D; Math.max(sumOfChose, sumOfNotChose);</span><br><span class="line">        map.put(root, res);</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 利用二维数组 第0位代表不偷，第一位代表偷。</span><br><span class="line">    public int rob2(TreeNode root) &#123;</span><br><span class="line">        if (root &#x3D;&#x3D; null) return 0;</span><br><span class="line">        int[] res &#x3D; helper(root);</span><br><span class="line">        return Math.max(res[0], res[1]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public int[] helper(TreeNode root) &#123;</span><br><span class="line">        if (root &#x3D;&#x3D; null) return new int[]&#123;0, 0&#125;;</span><br><span class="line">        int[] res &#x3D; new int[2];</span><br><span class="line">        int[] left &#x3D; helper(root.left);</span><br><span class="line">        int[] right &#x3D; helper(root.right);</span><br><span class="line">        &#x2F;&#x2F; 当前节点不偷的话</span><br><span class="line">        res[0] &#x3D; Math.max(left[0], left[1]) + Math.max(right[0], right[1]);</span><br><span class="line">        &#x2F;&#x2F; 当前节点偷的话</span><br><span class="line">        res[1] &#x3D; root.val + left[0] + right[0];</span><br><span class="line">        </span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=-i2BFAU25Zk">https://www.youtube.com/watch?v=-i2BFAU25Zk</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/house-robber-iii/discuss/79330/Step-by-step-tackling-of-the-problem">https://leetcode.com/problems/house-robber-iii/discuss/79330/Step-by-step-tackling-of-the-problem</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/10/337-house-robber-iii/" data-id="cki58ajrg001zodw4hmuv9b99" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/" rel="tag">Tree</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-213-house-robber-ii" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/08/213-house-robber-ii/" class="article-date">
-  <time datetime="2020-03-09T01:54:33.000Z" itemprop="datePublished">2020-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="https://www.linkedin.com/in/xingyu-long-b80613168/">
+            <i class="fab fa-linkedin"></i><!--
+      ---></a><!--
+    ---><!--
+    ---> and 
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/213-house-robber-ii/">LeetCode 213. House Robber II</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are <strong>arranged in a circle.</strong> That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and <strong>it will automatically contact the police if two adjacent houses were broken into on the same night</strong>.</p>
-<p>Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight <strong>without alerting the police</strong>.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: [2,3,2]</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: You cannot rob house 1 (money &#x3D; 2) and then rob house 3 (money &#x3D; 2), because they are adjacent houses.</span><br><span class="line">             </span><br><span class="line">Input: [1,2,3,1]</span><br><span class="line">Output: 4</span><br><span class="line">Explanation: Rob house 1 (money &#x3D; 1) and then rob house 3 (money &#x3D; 3). Total amount you can rob &#x3D; 1 + 3 &#x3D; 4.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>这道题是<a target="_blank" rel="noopener" href="https://leetcode.com/problems/house-robber/">House Robber</a>的follow up，但思路都是一样的。在某一点选择抢还是不抢当前物品，如果是抢当前物品，则是上一次的剩余 加上当前物品的价值；如果不抢当前这个的话，则会看前面的抢与不抢的最大值。对于这个题，该数组形成了一个一个circle，所以我们只需要比较两部分，其中是[0, n - 1] 和 [1, n]。这样保证第一个和最后一个元素不会碰撞。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(n) space:O(n)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rob</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> n = nums.length;</span><br><span class="line">       <span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">       <span class="comment">// 因为开头和结尾两个不能同时出现。</span></span><br><span class="line">       <span class="keyword">int</span> include = helper(nums, <span class="number">0</span>, n - <span class="number">1</span>); </span><br><span class="line">       <span class="keyword">int</span> notInclude = helper(nums, <span class="number">1</span>, n);</span><br><span class="line">       <span class="keyword">return</span> Math.max(include, notInclude);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">helper</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> rob = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> notRob = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = left; i &lt; right; i++) &#123;</span><br><span class="line">           <span class="keyword">int</span> temp = Math.max(rob, notRob);</span><br><span class="line">           rob = notRob + nums[i];</span><br><span class="line">           notRob = temp;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> Math.max(rob, notRob);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/08/213-house-robber-ii/" data-id="cki58ajre001vodw4g2dm8z6m" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1377-frog-position-after-t-seconds" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/08/1377-frog-position-after-t-seconds/" class="article-date">
-  <time datetime="2020-03-09T01:13:04.000Z" itemprop="datePublished">2020-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/1377-frog-position-after-t-seconds/">LeetCode 1377. Frog Position After T Seconds</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given an undirected tree consisting of <code>n</code> vertices numbered from 1 to <code>n</code>. A frog starts jumping from the <strong>vertex 1</strong>. In one second, the frog jumps from its current vertex to another <strong>unvisited</strong> vertex if they are directly connected. The frog can not jump back to a visited vertex. In case the frog can jump to several vertices it jumps randomly to one of them with the same probability, otherwise, when the frog can not jump to any unvisited vertex it jumps forever on the same vertex. </p>
-<p>The edges of the undirected tree are given in the array <code>edges</code>, where <code>edges[i] = [fromi, toi]</code> means that exists an edge connecting directly the vertices <code>fromi</code> and <code>toi</code>.</p>
-<p><em>Return the probability that after <code>t</code> seconds the frog is on the vertex <code>target</code>.</em></p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: n &#x3D; 7, edges &#x3D; [[1,2],[1,3],[1,7],[2,4],[2,6],[3,5]], t &#x3D; 2, target &#x3D; 4</span><br><span class="line">Output: 0.16666666666666666 </span><br><span class="line">Explanation: The figure above shows the given graph. The frog starts at vertex 1, jumping with 1&#x2F;3 probability to the vertex 2 after second 1 and then jumping with 1&#x2F;2 probability to vertex 4 after second 2. Thus the probability for the frog is on the vertex 4 after 2 seconds is 1&#x2F;3 * 1&#x2F;2 &#x3D; 1&#x2F;6 &#x3D; 0.16666666666666666. </span><br><span class="line"></span><br><span class="line">Input: n &#x3D; 7, edges &#x3D; [[1,2],[1,3],[1,7],[2,4],[2,6],[3,5]], t &#x3D; 1, target &#x3D; 7</span><br><span class="line">Output: 0.3333333333333333</span><br><span class="line">Explanation: The figure above shows the given graph. The frog starts at vertex 1, jumping with 1&#x2F;3 &#x3D; 0.3333333333333333 probability to the vertex 7 after second 1. </span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>首先理解题目意思，只要有选择可以跳，frog就会在t步内继续跳。这里也涉及到如果target是在叶子节点，然后无法再跳，我们就可以不管t的大小。但是如果target在途中的话，我们还有多的选择以及剩余t值，那么就无法到达。这道题也是一个无向图，所以构建的时候也需要小心。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time: O(n) space:O(n)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">frogPosition</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">final</span> <span class="keyword">int</span>[][] edges, <span class="keyword">int</span> t, <span class="keyword">final</span> <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">       List&lt;Integer&gt;[] graph = <span class="keyword">new</span> List[n];</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) graph[i] = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">final</span> <span class="keyword">int</span> [] e : edges) &#123;</span><br><span class="line">           graph[e[<span class="number">0</span>] - <span class="number">1</span>].add(e[<span class="number">1</span>] - <span class="number">1</span>);</span><br><span class="line">           graph[e[<span class="number">1</span>] - <span class="number">1</span>].add(e[<span class="number">0</span>] - <span class="number">1</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">final</span> <span class="keyword">boolean</span>[] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];</span><br><span class="line">       visited[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">       <span class="keyword">final</span> <span class="keyword">double</span>[] prob = <span class="keyword">new</span> <span class="keyword">double</span>[n];</span><br><span class="line">       prob[<span class="number">0</span>]  = <span class="number">1.0</span>;</span><br><span class="line">       <span class="keyword">final</span> Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">       queue.offer(<span class="number">0</span>);</span><br><span class="line">       <span class="comment">// 要考虑到frog不能跳，只有没有选择的时候，不能跳的时候才能留在原点跳完并且保留其概率</span></span><br><span class="line">       <span class="keyword">while</span> (!queue.isEmpty() &amp;&amp; t-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">           <span class="keyword">final</span> <span class="keyword">int</span> size = queue.size();</span><br><span class="line">           <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">               <span class="keyword">final</span> <span class="keyword">int</span> curr = queue.poll();</span><br><span class="line">               <span class="keyword">int</span> adjCount = <span class="number">0</span>;</span><br><span class="line">               <span class="keyword">for</span> (<span class="keyword">final</span> <span class="keyword">int</span> adj : graph[curr]) <span class="keyword">if</span> (!visited[adj]) adjCount++;</span><br><span class="line">               <span class="keyword">for</span> (<span class="keyword">final</span> <span class="keyword">int</span> adj : graph[curr]) &#123;</span><br><span class="line">                   <span class="keyword">if</span> (!visited[adj]) &#123;</span><br><span class="line">                       visited[adj] = <span class="keyword">true</span>;</span><br><span class="line">                       queue.offer(adj);</span><br><span class="line">                       prob[adj] = prob[curr] / adjCount;</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="comment">// 很关键，我们只需要上面保留下一层子节点的概率值就好</span></span><br><span class="line">               <span class="keyword">if</span> (adjCount &gt; <span class="number">0</span>) prob[curr] = <span class="number">0</span>;<span class="comment">// 因为不是目标地方，还会继续走</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> prob[target - <span class="number">1</span>];</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/frog-position-after-t-seconds/discuss/532505/Java-Straightforward-BFS-Clean-code-O(N)">https://leetcode.com/problems/frog-position-after-t-seconds/discuss/532505/Java-Straightforward-BFS-Clean-code-O(N)</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/08/1377-frog-position-after-t-seconds/" data-id="cki58ajr5001aodw4flh5fy16" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Graph/" rel="tag">Graph</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hard/" rel="tag">Hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1375-bulb-switcher-iii" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/08/1375-bulb-switcher-iii/" class="article-date">
-  <time datetime="2020-03-08T21:39:56.000Z" itemprop="datePublished">2020-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="mailto:xingyu.long.97@gmail.com">
+            <i class="fas fa-envelope"></i><!--
+      ---></a><!--
+      ---><!--
+    --->.
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/1375-bulb-switcher-iii/">LeetCode 1375. Bulb Switcher III</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>There is a room with <code>n</code> bulbs, numbered from <code>1</code> to <code>n</code>, arranged in a row from left to right. Initially, all the bulbs are turned off.</p>
-<p>At moment <em>k</em> (for <em>k</em> from <code>0</code> to <code>n - 1</code>), we turn on the <code>light[k]</code> bulb. A bulb <strong>change color to blue</strong> only if it is on and all the previous bulbs (to the left) are turned on too.</p>
-<p>Return the number of moments in which <strong>all turned on</strong> bulbs <strong>are blue.</strong></p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Input: light &#x3D; [2,1,3,5,4]</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: All bulbs turned on, are blue at the moment 1, 2 and 4.</span><br><span class="line"></span><br><span class="line">Input: light &#x3D; [3,2,4,1,5]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: All bulbs turned on, are blue at the moment 3, and 4 (index-0).</span><br><span class="line"></span><br><span class="line">Input: light &#x3D; [4,1,2,3]</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: All bulbs turned on, are blue at the moment 3 (index-0).</span><br><span class="line">Bulb 4th changes to blue at the moment 3.</span><br><span class="line"></span><br><span class="line">Input: light &#x3D; [2,1,4,3,6,5]</span><br><span class="line">Output: 3</span><br><span class="line"></span><br><span class="line">Input: light &#x3D; [1,2,3,4,5,6]</span><br><span class="line">Output: 6</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>比赛的时候没有做出来这个题，当时想的过于复杂。</p>
-<ul>
-<li>方法一：主要利用一个maxTurnOn来记录目前为止连续亮的灯是多少个，与当前的index + 1比较（index + 1可以表示目前我们开启了几盏灯）。如果两者相同，则表示达到目标状态，结果加1。</li>
-<li>方法二：或者更加简单的方式，用一个变量来维护最远能开的灯，如果当前的个数与这个最远的灯重合，结果加1。</li>
-</ul>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(n) space:O(n)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numTimesAllBlue</span><span class="params">(<span class="keyword">int</span>[] light)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 查看连续的长度</span></span><br><span class="line">        <span class="keyword">int</span> n = light.length;</span><br><span class="line">        <span class="keyword">boolean</span>[] turn = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];</span><br><span class="line">        <span class="keyword">int</span> maxTurnOn = <span class="number">0</span>, res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            turn[light[i] - <span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">            <span class="comment">// 看最长的sequence到哪</span></span><br><span class="line">            <span class="keyword">while</span> (maxTurnOn &lt; n &amp;&amp; turn[maxTurnOn]) </span><br><span class="line">                maxTurnOn++;</span><br><span class="line">            <span class="comment">// 因为前面的++操作，所以代表i以及之前的已经都亮了</span></span><br><span class="line">            <span class="keyword">if</span> (maxTurnOn == i + <span class="number">1</span>) res++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// time:O(n) space: O(1)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numTimesAllBlue2</span><span class="params">(<span class="keyword">int</span>[] light)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = light.length;</span><br><span class="line">        <span class="keyword">int</span> right = <span class="number">0</span>, res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            right = Math.max(right, light[i]);</span><br><span class="line">            <span class="keyword">if</span> (right == i + <span class="number">1</span>) res++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/bulb-switcher-iii/discuss/532538/JavaC%2B%2BPython-Straight-Forward-O(1)-Space">https://leetcode.com/problems/bulb-switcher-iii/discuss/532538/JavaC%2B%2BPython-Straight-Forward-O(1)-Space</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/bulb-switcher-iii/discuss/532478/C%2B%2B-Checking-for-contiguous-sequence">https://leetcode.com/problems/bulb-switcher-iii/discuss/532478/C%2B%2B-Checking-for-contiguous-sequence</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/08/1375-bulb-switcher-iii/" data-id="cki58ajr10015odw4g7at5vs0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/" rel="tag">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
+    </p>
   
-</article>
-
-
-  
-    <article id="post-1376-time-needed-to-inform-all-employees" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/08/1376-time-needed-to-inform-all-employees/" class="article-date">
-  <time datetime="2020-03-08T15:35:12.000Z" itemprop="datePublished">2020-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/1376-time-needed-to-inform-all-employees/">LeetCode 1376. Time Needed to Inform All Employees</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>A company has <code>n</code> employees with a unique ID for each employee from <code>0</code> to <code>n - 1</code>. The head of the company has is the one with <code>headID</code>.</p>
-<p>Each employee has one direct manager given in the <code>manager</code> array where <code>manager[i]</code> is the direct manager of the <code>i-th</code> employee, <code>manager[headID] = -1</code>. Also it’s guaranteed that the subordination relationships have a tree structure.</p>
-<p>The head of the company wants to inform all the employees of the company of an urgent piece of news. He will inform his direct subordinates and they will inform their subordinates and so on until all employees know about the urgent news.</p>
-<p>The <code>i-th</code> employee needs <code>informTime[i]</code> minutes to inform all of his direct subordinates (i.e After informTime[i] minutes, all his direct subordinates can start spreading the news).</p>
-<p>Return <em>the number of minutes</em> needed to inform all the employees about the urgent news.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Input: n &#x3D; 1, headID &#x3D; 0, manager &#x3D; [-1], informTime &#x3D; [0]</span><br><span class="line">Output: 0</span><br><span class="line">Explanation: The head of the company is the only employee in the company.</span><br><span class="line"></span><br><span class="line">Input: n &#x3D; 6, headID &#x3D; 2, manager &#x3D; [2,2,-1,2,2,2], informTime &#x3D; [0,0,1,0,0,0]</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: The head of the company with id &#x3D; 2 is the direct manager of all the employees in the company and needs 1 minute to inform them all.</span><br><span class="line">The tree structure of the employees in the company is shown.</span><br><span class="line"></span><br><span class="line">Input: n &#x3D; 7, headID &#x3D; 6, manager &#x3D; [1,2,3,4,5,6,-1], informTime &#x3D; [0,6,5,4,3,2,1]</span><br><span class="line">Output: 21</span><br><span class="line">Explanation: The head has id &#x3D; 6. He will inform employee with id &#x3D; 5 in 1 minute.</span><br><span class="line">The employee with id &#x3D; 5 will inform the employee with id &#x3D; 4 in 2 minutes.</span><br><span class="line">The employee with id &#x3D; 4 will inform the employee with id &#x3D; 3 in 3 minutes.</span><br><span class="line">The employee with id &#x3D; 3 will inform the employee with id &#x3D; 2 in 4 minutes.</span><br><span class="line">The employee with id &#x3D; 2 will inform the employee with id &#x3D; 1 in 5 minutes.</span><br><span class="line">The employee with id &#x3D; 1 will inform the employee with id &#x3D; 0 in 6 minutes.</span><br><span class="line">Needed time &#x3D; 1 + 2 + 3 + 4 + 5 + 6 &#x3D; 21.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>这是一个典型Graph的题目，需要先构建关系，这样可以优化后面的过程。这个题需要找到最长的时间，进而可以通知所有的员工。所以，我们可以使用BFS的方法，进行每层搜索并且到达叶子节点（表明已经是最末端的员工了）的时候对比从开始到目前节点所耗用的时间。这个也有点类似于<a target="_blank" rel="noopener" href="https://leetcode.com/problems/network-delay-time/">743. Network Delay Time</a>，但是743每个一点可能有几条路选择。但是本题要求了每个人只能有一个manager，所以不会有多条路到达同一个点，只需要用BFS每层遍历即可。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time: O(n) space:O(n)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> id;</span><br><span class="line">        <span class="keyword">int</span> time;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Node</span> <span class="params">(<span class="keyword">int</span> id, <span class="keyword">int</span> time)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.id = id;</span><br><span class="line">            <span class="keyword">this</span>.time = time;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 需要用hashmap先保存父子关系。不用保持leaf节点的值再取最大，直接每次poll出来的时候比较就行。</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numOfMinutes</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> headID, <span class="keyword">int</span>[] manager, <span class="keyword">int</span>[] informTime)</span> </span>&#123;</span><br><span class="line">        Queue&lt;Node&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        HashMap&lt;Integer, List&lt;Integer&gt;&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            map.putIfAbsent(manager[i], <span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">            map.get(manager[i]).add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        queue.offer(<span class="keyword">new</span> Node(headID, <span class="number">0</span>));</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">int</span> size = queue.size();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">                Node node = queue.poll();</span><br><span class="line">                <span class="keyword">int</span> id = node.id;</span><br><span class="line">                res = Math.max(res, node.time); <span class="comment">// 这里直接比较得到最大。相当于每次都在操作。</span></span><br><span class="line">                List&lt;Integer&gt; nexts = map.getOrDefault(id, <span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">                <span class="keyword">if</span> (nexts != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> next : nexts) &#123;</span><br><span class="line">                        queue.offer(<span class="keyword">new</span> Node(next, node.time + informTime[id]));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/08/1376-time-needed-to-inform-all-employees/" data-id="cki58ajr20017odw47d97cqxs" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Graph/" rel="tag">Graph</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
-  </nav>
-
 </section>
+
+<section id="writing">
+  <span class="h1"><a href="/archives">Writing</a></span>
+  
+  <span class="h2">Topics</span>
+  <span class="widget tagcloud">
+    <a href="/tags/0-1-Knapsack-Problem/" style="font-size: 10px;">0-1 Knapsack Problem</a> <a href="/tags/Add-Operation/" style="font-size: 10px;">Add Operation</a> <a href="/tags/Airbnb/" style="font-size: 11.05px;">Airbnb</a> <a href="/tags/Amazon/" style="font-size: 10.53px;">Amazon</a> <a href="/tags/Array/" style="font-size: 13.68px;">Array</a> <a href="/tags/BFS/" style="font-size: 11.58px;">BFS</a> <a href="/tags/BST/" style="font-size: 10px;">BST</a> <a href="/tags/Backtracking/" style="font-size: 10px;">Backtracking</a> <a href="/tags/Binary-Search/" style="font-size: 10.53px;">Binary Search</a> <a href="/tags/Binary-Search-Tree/" style="font-size: 10px;">Binary Search Tree</a> <a href="/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/tags/Bit-Manipulation/" style="font-size: 10.53px;">Bit Manipulation</a> <a href="/tags/Biweekly-Contest/" style="font-size: 14.74px;">Biweekly Contest</a> <a href="/tags/Bucket-Sort/" style="font-size: 10px;">Bucket Sort</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Daily-Coding-Problem/" style="font-size: 19.47px;">Daily Coding Problem</a> <a href="/tags/Dec-2019/" style="font-size: 14.21px;">Dec 2019</a> <a href="/tags/Design/" style="font-size: 10px;">Design</a> <a href="/tags/Dropbox/" style="font-size: 10.53px;">Dropbox</a> <a href="/tags/Dynamic-Programming/" style="font-size: 16.84px;">Dynamic Programming</a> <a href="/tags/Easy/" style="font-size: 15.79px;">Easy</a> <a href="/tags/Facebook/" style="font-size: 11.05px;">Facebook</a> <a href="/tags/Feb-2020/" style="font-size: 17.89px;">Feb 2020</a> <a href="/tags/Google/" style="font-size: 12.63px;">Google</a> <a href="/tags/Graph/" style="font-size: 11.05px;">Graph</a> <a href="/tags/Greedy/" style="font-size: 12.11px;">Greedy</a> <a href="/tags/Hard/" style="font-size: 15.26px;">Hard</a> <a href="/tags/HashMap/" style="font-size: 13.16px;">HashMap</a> <a href="/tags/Jan-2020/" style="font-size: 17.37px;">Jan 2020</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/LinkedList/" style="font-size: 11.05px;">LinkedList</a> <a href="/tags/Mar-2020/" style="font-size: 18.42px;">Mar 2020</a> <a href="/tags/Math/" style="font-size: 11.05px;">Math</a> <a href="/tags/Matrix/" style="font-size: 12.11px;">Matrix</a> <a href="/tags/Medium/" style="font-size: 18.95px;">Medium</a> <a href="/tags/Microsoft/" style="font-size: 10.53px;">Microsoft</a> <a href="/tags/Oct-2020/" style="font-size: 11.05px;">Oct 2020</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Prefix/" style="font-size: 10.53px;">Prefix</a> <a href="/tags/Prefix-Sum/" style="font-size: 10px;">Prefix Sum</a> <a href="/tags/Priority-Queue/" style="font-size: 12.11px;">Priority Queue</a> <a href="/tags/Quora/" style="font-size: 10px;">Quora</a> <a href="/tags/Sliding-Window/" style="font-size: 12.11px;">Sliding Window</a> <a href="/tags/Sort/" style="font-size: 10.53px;">Sort</a> <a href="/tags/Sorting/" style="font-size: 12.11px;">Sorting</a> <a href="/tags/Stack/" style="font-size: 10px;">Stack</a> <a href="/tags/String/" style="font-size: 12.11px;">String</a> <a href="/tags/Stripe/" style="font-size: 10px;">Stripe</a> <a href="/tags/Top-Down/" style="font-size: 10px;">Top-Down</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/Twitter/" style="font-size: 10.53px;">Twitter</a> <a href="/tags/Two-Pointer/" style="font-size: 10.53px;">Two Pointer</a> <a href="/tags/Uber/" style="font-size: 11.05px;">Uber</a> <a href="/tags/Weekly-Contest/" style="font-size: 16.32px;">Weekly Contest</a> <a href="/tags/postorder/" style="font-size: 10.53px;">postorder</a> <a href="/tags/preorder/" style="font-size: 10.53px;">preorder</a>
+  </span>
+  <span class="h2">Most recent</span>
+  
+  <ul class="post-list">
+    
+    
+      
+    
+    
+      <li class="post-item">
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/0-1-Knapsack-Problem/" rel="tag">0-1 Knapsack Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Add-Operation/" rel="tag">Add Operation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Airbnb/" rel="tag">Airbnb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon/" rel="tag">Amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array/" rel="tag">Array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BST/" rel="tag">BST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backtracking/" rel="tag">Backtracking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Search/" rel="tag">Binary Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Search-Tree/" rel="tag">Binary Search Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Tree/" rel="tag">Binary Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/" rel="tag">Bit Manipulation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Biweekly-Contest/" rel="tag">Biweekly Contest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bucket-Sort/" rel="tag">Bucket Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dec-2019/" rel="tag">Dec 2019</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/" rel="tag">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dropbox/" rel="tag">Dropbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Easy/" rel="tag">Easy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Facebook/" rel="tag">Facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Feb-2020/" rel="tag">Feb 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Graph/" rel="tag">Graph</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Greedy/" rel="tag">Greedy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hard/" rel="tag">Hard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jan-2020/" rel="tag">Jan 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matrix/" rel="tag">Matrix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Microsoft/" rel="tag">Microsoft</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oct-2020/" rel="tag">Oct 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Palindrome/" rel="tag">Palindrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Prefix/" rel="tag">Prefix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Prefix-Sum/" rel="tag">Prefix Sum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Priority-Queue/" rel="tag">Priority Queue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quora/" rel="tag">Quora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sliding-Window/" rel="tag">Sliding Window</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sorting/" rel="tag">Sorting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stack/" rel="tag">Stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stripe/" rel="tag">Stripe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Top-Down/" rel="tag">Top-Down</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/" rel="tag">Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Twitter/" rel="tag">Twitter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Two-Pointer/" rel="tag">Two Pointer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Uber/" rel="tag">Uber</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postorder/" rel="tag">postorder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/preorder/" rel="tag">preorder</a></li></ul>
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-18T15:45:23.000Z" itemprop="datePublished">2020-10-18</time>
+        
+      
     </div>
-  </div>
 
 
-  
+        <span>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/0-1-Knapsack-Problem/" style="font-size: 10px;">0-1 Knapsack Problem</a> <a href="/tags/Add-Operation/" style="font-size: 10px;">Add Operation</a> <a href="/tags/Airbnb/" style="font-size: 11.05px;">Airbnb</a> <a href="/tags/Amazon/" style="font-size: 10.53px;">Amazon</a> <a href="/tags/Array/" style="font-size: 13.68px;">Array</a> <a href="/tags/BFS/" style="font-size: 11.58px;">BFS</a> <a href="/tags/BST/" style="font-size: 10px;">BST</a> <a href="/tags/Backtracking/" style="font-size: 10px;">Backtracking</a> <a href="/tags/Binary-Search/" style="font-size: 10.53px;">Binary Search</a> <a href="/tags/Binary-Search-Tree/" style="font-size: 10px;">Binary Search Tree</a> <a href="/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/tags/Bit-Manipulation/" style="font-size: 10.53px;">Bit Manipulation</a> <a href="/tags/Biweekly-Contest/" style="font-size: 14.74px;">Biweekly Contest</a> <a href="/tags/Bucket-Sort/" style="font-size: 10px;">Bucket Sort</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Daily-Coding-Problem/" style="font-size: 19.47px;">Daily Coding Problem</a> <a href="/tags/Dec-2019/" style="font-size: 14.21px;">Dec 2019</a> <a href="/tags/Design/" style="font-size: 10px;">Design</a> <a href="/tags/Dropbox/" style="font-size: 10.53px;">Dropbox</a> <a href="/tags/Dynamic-Programming/" style="font-size: 16.84px;">Dynamic Programming</a> <a href="/tags/Easy/" style="font-size: 15.79px;">Easy</a> <a href="/tags/Facebook/" style="font-size: 11.05px;">Facebook</a> <a href="/tags/Feb-2020/" style="font-size: 17.89px;">Feb 2020</a> <a href="/tags/Google/" style="font-size: 12.63px;">Google</a> <a href="/tags/Graph/" style="font-size: 11.05px;">Graph</a> <a href="/tags/Greedy/" style="font-size: 12.11px;">Greedy</a> <a href="/tags/Hard/" style="font-size: 15.26px;">Hard</a> <a href="/tags/HashMap/" style="font-size: 13.16px;">HashMap</a> <a href="/tags/Jan-2020/" style="font-size: 17.37px;">Jan 2020</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/LinkedList/" style="font-size: 11.05px;">LinkedList</a> <a href="/tags/Mar-2020/" style="font-size: 18.42px;">Mar 2020</a> <a href="/tags/Math/" style="font-size: 11.05px;">Math</a> <a href="/tags/Matrix/" style="font-size: 12.11px;">Matrix</a> <a href="/tags/Medium/" style="font-size: 18.95px;">Medium</a> <a href="/tags/Microsoft/" style="font-size: 10.53px;">Microsoft</a> <a href="/tags/Oct-2020/" style="font-size: 11.05px;">Oct 2020</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Prefix/" style="font-size: 10.53px;">Prefix</a> <a href="/tags/Prefix-Sum/" style="font-size: 10px;">Prefix Sum</a> <a href="/tags/Priority-Queue/" style="font-size: 12.11px;">Priority Queue</a> <a href="/tags/Quora/" style="font-size: 10px;">Quora</a> <a href="/tags/Sliding-Window/" style="font-size: 12.11px;">Sliding Window</a> <a href="/tags/Sort/" style="font-size: 10.53px;">Sort</a> <a href="/tags/Sorting/" style="font-size: 12.11px;">Sorting</a> <a href="/tags/Stack/" style="font-size: 10px;">Stack</a> <a href="/tags/String/" style="font-size: 12.11px;">String</a> <a href="/tags/Stripe/" style="font-size: 10px;">Stripe</a> <a href="/tags/Top-Down/" style="font-size: 10px;">Top-Down</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/Twitter/" style="font-size: 10.53px;">Twitter</a> <a href="/tags/Two-Pointer/" style="font-size: 10.53px;">Two Pointer</a> <a href="/tags/Uber/" style="font-size: 11.05px;">Uber</a> <a href="/tags/Weekly-Contest/" style="font-size: 16.32px;">Weekly Contest</a> <a href="/tags/postorder/" style="font-size: 10.53px;">postorder</a> <a href="/tags/preorder/" style="font-size: 10.53px;">preorder</a>
+        <a class="" href="/2020/10/18/1541-Minimum-Insertions-to-Balance-a-Parentheses-String/">LeetCode 1541. Minimum Insertions to Balance a Parentheses String</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-15T02:20:03.000Z" itemprop="datePublished">2020-10-14</time>
+        
+      
     </div>
-  </div>
 
-  
+
+        <span>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+        <a class="" href="/2020/10/14/1616-Split-Two-Strings-to-Make-Palindrome/">LeetCode 1616. Split Two Strings to Make Palindrome</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-12T02:08:51.000Z" itemprop="datePublished">2020-10-11</time>
+        
+      
     </div>
-  </div>
 
 
-  
+        <span>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
+        <a class="" href="/2020/10/11/1615-Maximal-Network-Rank/">LeetCode 1615. Maximal Network Rank</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-11T01:11:58.000Z" itemprop="datePublished">2020-10-10</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2020/10/10/667-Beautiful-Arrangement-II/">LeetCode 667. Beautiful Arrangement II</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-03-24T17:30:43.000Z" itemprop="datePublished">2020-03-24</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2020/03/24/1387-sort-integers-by-the-power-value/">LeetCode 1387. Sort Integers by The Power Value</a>
+    
+
+
+</span>
+      </li>
+    
+  </ul>
+  
+</section>
+
+
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Clark
+  </div>
+  <div class="footer-right">
+    <nav>
       <ul>
-        
-          <li>
-            <a href="/2020/10/18/1541-Minimum-Insertions-to-Balance-a-Parentheses-String/">LeetCode 1541. Minimum Insertions to Balance a Parentheses String</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/14/1616-Split-Two-Strings-to-Make-Palindrome/">LeetCode 1616. Split Two Strings to Make Palindrome</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/11/1615-Maximal-Network-Rank/">LeetCode 1615. Maximal Network Rank</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/10/667-Beautiful-Arrangement-II/">LeetCode 667. Beautiful Arrangement II</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/24/1387-sort-integers-by-the-power-value/">LeetCode 1387. Sort Integers by The Power Value</a>
-          </li>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/other/">Other</a></li>
         
       </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    </nav>
   </div>
 </footer>
+
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    <!-- styles -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
 
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
 
 
-<script src="/js/script.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
 
 
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
 
 
-  </div>
 </body>
 </html>

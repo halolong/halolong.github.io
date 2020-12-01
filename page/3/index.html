@@ -1,660 +1,303 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Clark Long&#39;s Tech Blog">
 <meta property="og:url" content="http://example.com/page/3/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="Clark Long&#39;s Tech Blog">
+<meta property="og:locale">
+<meta property="article:author" content="Clark">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Clark Long&#39;s Tech Blog</title>
+    <!-- styles -->
+    
 <link rel="stylesheet" href="/css/style.css">
 
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
 <meta name="generator" content="Hexo 5.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4">
+        
+          <header id="header">
+  <a href="/">
+  
+    
+      <div id="logo" style="background-image: url(/images/logo.png);"></div>
+    
+  
+    <div id="title">
+      <h1>Clark Long&#39;s Tech Blog</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">Home</a></li>
+       
+        <li><a href="/archives/">Writing</a></li>
+       
+        <li><a href="/about/">About</a></li>
+       
+        <li><a href="/other/">Other</a></li>
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
+    </ul>
   </div>
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-1374-generate-a-string-with-characters-that-have-odd-counts" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/08/1374-generate-a-string-with-characters-that-have-odd-counts/" class="article-date">
-  <time datetime="2020-03-08T15:23:29.000Z" itemprop="datePublished">2020-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+
         
+        <section id="about">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/08/1374-generate-a-string-with-characters-that-have-odd-counts/">LeetCode 1374. Generate a String With Characters That Have Odd Counts</a>
-    </h1>
   
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given an integer <code>n</code>, <em>return a string with <code>n</code> characters such that each character in such string occurs <strong>an odd number of times</strong></em>.</p>
-<p>The returned string must contain only lowercase English letters. If there are multiples valid strings, return <strong>any</strong> of them.  </p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: n &#x3D; 4</span><br><span class="line">Output: &quot;pppz&quot;</span><br><span class="line">Explanation: &quot;pppz&quot; is a valid string since the character &#39;p&#39; occurs three times and the character &#39;z&#39; occurs once. Note that there are many other valid strings such as &quot;ohhh&quot; and &quot;love&quot;.</span><br><span class="line"></span><br><span class="line">Input: n &#x3D; 7</span><br><span class="line">Output: &quot;holasss&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>因为题目没有要求字符的使用情况，只是表示需要出现的字符呈现奇数个数。对于构造结果，如果n本身就是奇数个，就输出n个’a’即可，如果n为偶数，输出n-1个’a’以及1个’b’。这样就保证了符合题目要求。</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time: O(n) space:O(n)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">generateTheString</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                sb.append(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            sb.append(<span class="string">&#x27;b&#x27;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sb.append(<span class="string">&#x27;a&#x27;</span>);        </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/08/1374-generate-a-string-with-characters-that-have-odd-counts/" data-id="cki58ajr00012odw456u8291t" class="article-share-link">Share</a>
+    <p>
+      Find me on
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Easy/" rel="tag">Easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/" rel="tag">String</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1320-minimum-distance-to-type-a-word-using-two-fingers" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/07/1320-minimum-distance-to-type-a-word-using-two-fingers/" class="article-date">
-  <time datetime="2020-03-07T16:14:28.000Z" itemprop="datePublished">2020-03-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/07/1320-minimum-distance-to-type-a-word-using-two-fingers/">LeetCode 1320. Minimum Distance to Type a Word Using Two Fingers</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>You have a keyboard layout as shown above in the XY plane, where each English uppercase letter is located at some coordinate, for example, the letter <strong>A</strong> is located at coordinate <strong>(0,0)</strong>, the letter <strong>B</strong> is located at coordinate <strong>(0,1)</strong>, the letter <strong>P</strong> is located at coordinate <strong>(2,3)</strong> and the letter <strong>Z</strong> is located at coordinate <strong>(4,1)</strong>.</p>
-<p>Given the string <code>word</code>, return the minimum total distance to type such string using only two fingers. The distance between coordinates <strong>(x1,y1)</strong> and <strong>(x2,y2)</strong> is <strong>|x1 - x2| + |y1 - y2|</strong>. </p>
-<p>Note that the initial positions of your two fingers are considered free so don’t count towards your total distance, also your two fingers do not have to start at the first letter or the first two letters.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Input: word &#x3D; &quot;CAKE&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: </span><br><span class="line">Using two fingers, one optimal way to type &quot;CAKE&quot; is: </span><br><span class="line">Finger 1 on letter &#39;C&#39; -&gt; cost &#x3D; 0 </span><br><span class="line">Finger 1 on letter &#39;A&#39; -&gt; cost &#x3D; Distance from letter &#39;C&#39; to letter &#39;A&#39; &#x3D; 2 </span><br><span class="line">Finger 2 on letter &#39;K&#39; -&gt; cost &#x3D; 0 </span><br><span class="line">Finger 2 on letter &#39;E&#39; -&gt; cost &#x3D; Distance from letter &#39;K&#39; to letter &#39;E&#39; &#x3D; 1 </span><br><span class="line">Total distance &#x3D; 3</span><br><span class="line"></span><br><span class="line">Input: word &#x3D; &quot;HAPPY&quot;</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: </span><br><span class="line">Using two fingers, one optimal way to type &quot;HAPPY&quot; is:</span><br><span class="line">Finger 1 on letter &#39;H&#39; -&gt; cost &#x3D; 0</span><br><span class="line">Finger 1 on letter &#39;A&#39; -&gt; cost &#x3D; Distance from letter &#39;H&#39; to letter &#39;A&#39; &#x3D; 2</span><br><span class="line">Finger 2 on letter &#39;P&#39; -&gt; cost &#x3D; 0</span><br><span class="line">Finger 2 on letter &#39;P&#39; -&gt; cost &#x3D; Distance from letter &#39;P&#39; to letter &#39;P&#39; &#x3D; 0</span><br><span class="line">Finger 1 on letter &#39;Y&#39; -&gt; cost &#x3D; Distance from letter &#39;A&#39; to letter &#39;Y&#39; &#x3D; 4</span><br><span class="line">Total distance &#x3D; 6</span><br><span class="line"></span><br><span class="line">Input: word &#x3D; &quot;NEW&quot;</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>For each character, we need to decide which finger we need to use and to explore different combinations. Also, we use memo array to cache.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time: O(n * 27 * 27) space: O(n * 27 * 27)</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumDistance</span><span class="params">(String word)</span> </span>&#123;</span><br><span class="line">       k = <span class="number">26</span>;<span class="comment">// 作为初始的free状态</span></span><br><span class="line">       <span class="keyword">int</span> n = word.length();</span><br><span class="line">       <span class="keyword">int</span>[][][] memo = <span class="keyword">new</span> <span class="keyword">int</span>[n][<span class="number">27</span>][<span class="number">27</span>];</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span>[][] arrs : memo) &#123;</span><br><span class="line">           <span class="keyword">for</span> (<span class="keyword">int</span>[] arr : arrs) Arrays.fill(arr, -<span class="number">1</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> dfs(word, <span class="number">0</span>, k, k, n, memo);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">cost</span><span class="params">(<span class="keyword">int</span> from, <span class="keyword">int</span> to)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (from == k) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">return</span> Math.abs(from / <span class="number">6</span> - to / <span class="number">6</span>) + Math.abs(from % <span class="number">6</span> - to % <span class="number">6</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">// min cost to type word[i : n]. l是左手敲进去，r就是右手敲进去</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(String word, <span class="keyword">int</span> i, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> n, <span class="keyword">int</span>[][][] memo)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (i == n) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">if</span> (memo[i][l][r] != -<span class="number">1</span>) <span class="keyword">return</span> memo[i][l][r];</span><br><span class="line">       <span class="keyword">int</span> pos = word.charAt(i) - <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">       <span class="keyword">int</span> res = Math.min(dfs(word, i + <span class="number">1</span>, pos, r, n, memo) + cost(l, pos), </span><br><span class="line">                          dfs(word, i + <span class="number">1</span>, l, pos, n, memo) + cost(r, pos));</span><br><span class="line">       memo[i][l][r] = res;</span><br><span class="line">       <span class="keyword">return</span> res;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/07/1320-minimum-distance-to-type-a-word-using-two-fingers/" data-id="cki58ajqe0005odw4f6m120b0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hard/" rel="tag">Hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-935-knight-dialer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/06/935-knight-dialer/" class="article-date">
-  <time datetime="2020-03-06T15:46:34.000Z" itemprop="datePublished">2020-03-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="https://github.com/xingyu-long">
+            <i class="fab fa-github"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/06/935-knight-dialer/">LeetCode 935. Knight Dialer</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>A chess knight can move as indicated in the chess diagram below:</p>
-<p>This time, we place our chess knight on any numbered key of a phone pad (indicated above), and the knight makes <code>N-1</code> hops. Each hop must be from one key to another numbered key.</p>
-<p>Each time it lands on a key (including the initial placement of the knight), it presses the number of that key, pressing <code>N</code> digits total.</p>
-<p>How many distinct numbers can you dial in this manner?</p>
-<p>Since the answer may be large, <strong>output the answer modulo <code>10^9 + 7</code></strong>.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: 1</span><br><span class="line">Output: 10</span><br><span class="line"></span><br><span class="line">Input: 2</span><br><span class="line">Output: 20</span><br><span class="line"></span><br><span class="line">Input: 3</span><br><span class="line">Output: 46</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p><strong>Intuition</strong>: we need to search different ways in N steps, so we have to use DFS first and then memo it.</p>
-<p>For the memo part, which information we need to care? I think it should be row(i), col(j), and count.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> MOD;</span><br><span class="line">    <span class="keyword">int</span>[][][] memo;</span><br><span class="line">    <span class="comment">// time:O(10N) space:O(N * 4 * 3)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">knightDialer</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res  = <span class="number">0</span>;</span><br><span class="line">        memo = <span class="keyword">new</span> <span class="keyword">int</span>[N + <span class="number">1</span>][<span class="number">4</span>][<span class="number">3</span>];</span><br><span class="line">        MOD = (<span class="keyword">int</span>) Math.pow(<span class="number">10</span>, <span class="number">9</span>) + <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</span><br><span class="line">                res = (dfs(N, i, j, <span class="number">1</span>) + res) % MOD;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> count)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt;= <span class="number">4</span> || j &lt; <span class="number">0</span> || j &gt;= <span class="number">3</span> || (i == <span class="number">3</span> &amp;&amp; j != <span class="number">1</span>)) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (count == N) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (memo[count][i][j] &gt; <span class="number">0</span>) <span class="keyword">return</span> memo[count][i][j];</span><br><span class="line">        <span class="keyword">int</span>[][] dirs = &#123;&#123;<span class="number">2</span>, <span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">2</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, -<span class="number">2</span>&#125;,</span><br><span class="line">                        &#123;-<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;-<span class="number">2</span>, <span class="number">1</span>&#125;, &#123;-<span class="number">1</span>, -<span class="number">2</span>&#125;, &#123;-<span class="number">2</span>, -<span class="number">1</span>&#125;&#125;;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] dir : dirs) &#123;</span><br><span class="line">            res = (res + dfs(N, i + dir[<span class="number">0</span>], j + dir[<span class="number">1</span>], count + <span class="number">1</span>)) % MOD; </span><br><span class="line">        &#125;</span><br><span class="line">        memo[count][i][j] = res;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/06/935-knight-dialer/" data-id="cki58ajrp002oodw474gb5lzt" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-494-target-sum" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/05/494-target-sum/" class="article-date">
-  <time datetime="2020-03-06T01:19:34.000Z" itemprop="datePublished">2020-03-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/05/494-target-sum/">LeetCode 494. Target Sum</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>You are given a list of non-negative integers, a1, a2, …, an, and a target, S. Now you have 2 symbols <code>+</code> and <code>-</code>. For each integer, you should choose one from <code>+</code> and <code>-</code> as its new symbol.</p>
-<p>Find out how many ways to assign symbols to make sum of integers equal to target S.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Input: nums is [1, 1, 1, 1, 1], S is 3. </span><br><span class="line">Output: 5</span><br><span class="line">Explanation: </span><br><span class="line"></span><br><span class="line">-1+1+1+1+1 &#x3D; 3</span><br><span class="line">+1-1+1+1+1 &#x3D; 3</span><br><span class="line">+1+1-1+1+1 &#x3D; 3</span><br><span class="line">+1+1+1-1+1 &#x3D; 3</span><br><span class="line">+1+1+1+1-1 &#x3D; 3</span><br><span class="line"></span><br><span class="line">There are 5 ways to assign symbols to make the sum of nums be target 3.</span><br></pre></td></tr></table></figure>
-
-<p>**Note: **</p>
-<ol>
-<li>The length of the given array is positive and will not exceed 20.</li>
-<li>The sum of elements in the given array will not exceed 1000.</li>
-<li>Your output answer is guaranteed to be fitted in a 32-bit integer.</li>
-</ol>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>When I see the input size, I am thinking <code>n^3</code> solution should work. So, I try DFS method to explore different combinations and then after consideration,  we can cache results that will used so many times. For this question, I’d like to use rest of sum and index to mark the unqiue status and cache. But at this time, I didn’t use 2-D array because sum may exists as negative number. So, I’d like to use HashMap to store.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(2^n) space:O(n)</span></span><br><span class="line">  <span class="comment">// search, backtracking</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findTargetSumWays</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> S)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">int</span> n = nums.length;</span><br><span class="line">      <span class="keyword">return</span> dfs(nums, <span class="number">0</span>, S, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> index, <span class="keyword">int</span> target, <span class="keyword">int</span> val, <span class="keyword">int</span> prev)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (index == nums.length) &#123;</span><br><span class="line">          <span class="keyword">if</span> (val == target) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">      res += dfs(nums, index + <span class="number">1</span>, target, val + nums[index], nums[index]);</span><br><span class="line">      res += dfs(nums, index + <span class="number">1</span>, target, val - nums[index], -nums[index]);</span><br><span class="line">      <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">// dfs + memo</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findTargetSumWays2</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> S)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      HashMap&lt;String, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">      <span class="keyword">return</span> dfs(nums, <span class="number">0</span>, S, map);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// time:O(sum * n) space:O(n)</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> index, <span class="keyword">int</span> target, HashMap&lt;String, Integer&gt; map)</span> </span>&#123;</span><br><span class="line">      String key = index + <span class="string">&quot;-&quot;</span> + target;</span><br><span class="line">      <span class="keyword">if</span> (index == nums.length) &#123;</span><br><span class="line">          <span class="keyword">if</span> (target == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (map.get(key) != <span class="keyword">null</span>) <span class="keyword">return</span> map.get(key);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">      res += dfs(nums, index + <span class="number">1</span>, target - nums[index], map);</span><br><span class="line">      res += dfs(nums, index + <span class="number">1</span>, target + nums[index], map);</span><br><span class="line">      map.put(key, res);</span><br><span class="line">      <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/05/494-target-sum/" data-id="cki58ajrj0027odw4b6v6349x" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Top-Down/" rel="tag">Top-Down</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1367-linked-list-in-binary-tree" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/01/1367-linked-list-in-binary-tree/" class="article-date">
-  <time datetime="2020-03-01T20:42:59.000Z" itemprop="datePublished">2020-03-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="https://twitter.com/xingyu_long">
+            <i class="fab fa-twitter"></i><!--
+      ---></a><!--
+    ---><!--
+    --->, 
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/01/1367-linked-list-in-binary-tree/">LeetCode 1367. Linked List in Binary Tree</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given a binary tree <code>root</code> and a linked list with <code>head</code> as the first node. </p>
-<p>Return True if all the elements in the linked list starting from the <code>head</code> correspond to some <em>downward path</em> connected in the binary tree otherwise return False.</p>
-<p>In this context downward path means a path that starts at some node and goes downwards.</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Only need to check possible start position and then use DFS traversal the tree and LinkedList.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time: O(n * min(L, H)) L: length of list, H = tree Height</span></span><br><span class="line">    <span class="comment">// space:O(H)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSubPath</span><span class="params">(ListNode head, TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> &amp;&amp; root == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || root == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (head.val == root.val) &#123;</span><br><span class="line">            <span class="keyword">if</span> (dfs(head, root))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> isSubPath(head, root.left) || isSubPath(head, root.right);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> isSubPath(head, root.left) || isSubPath(head, root.right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">dfs</span><span class="params">(ListNode head, TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span> &amp;&amp; head != <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (root != <span class="keyword">null</span> &amp;&amp; head != <span class="keyword">null</span> &amp;&amp; head.val != root.val)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">boolean</span> left = dfs(head.next, root.left);</span><br><span class="line">        <span class="keyword">boolean</span> right = dfs(head.next, root.right);</span><br><span class="line">        <span class="keyword">return</span> left || right;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/01/1367-linked-list-in-binary-tree/" data-id="cki58ajr00010odw43v45fqxn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/" rel="tag">Tree</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1366-rank-teams-by-votes" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/01/1366-rank-teams-by-votes/" class="article-date">
-  <time datetime="2020-03-01T20:19:45.000Z" itemprop="datePublished">2020-03-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/01/1366-rank-teams-by-votes/">LeetCode 1366. Rank Teams by Votes</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>In a special ranking system, each voter gives a rank from highest to lowest to all teams participated in the competition.</p>
-<p>The ordering of teams is decided by who received the most position-one votes. If two or more teams tie in the first position, we consider the second position to resolve the conflict, if they tie again, we continue this process until the ties are resolved. If two or more teams are still tied after considering all positions, we rank them alphabetically based on their team letter.</p>
-<p>Given an array of strings <code>votes</code> which is the votes of all voters in the ranking systems. Sort all teams according to the ranking system described above.</p>
-<p>Return <em>a string of all teams</em> <strong>sorted</strong> by the ranking system.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Input: votes &#x3D; [&quot;ABC&quot;,&quot;ACB&quot;,&quot;ABC&quot;,&quot;ACB&quot;,&quot;ACB&quot;]</span><br><span class="line">Output: &quot;ACB&quot;</span><br><span class="line">Explanation: Team A was ranked first place by 5 voters. No other team was voted as first place so team A is the first team.</span><br><span class="line">Team B was ranked second by 2 voters and was ranked third by 3 voters.</span><br><span class="line">Team C was ranked second by 3 voters and was ranked third by 2 voters.</span><br><span class="line">As most of the voters ranked C second, team C is the second team and team B is the third.</span><br><span class="line"></span><br><span class="line">Input: votes &#x3D; [&quot;WXYZ&quot;,&quot;XYZW&quot;]</span><br><span class="line">Output: &quot;XWYZ&quot;</span><br><span class="line">Explanation: X is the winner due to tie-breaking rule. X has same votes as W for the first position but X has one vote as second position while W doesn&#39;t have any votes as second position. </span><br><span class="line"></span><br><span class="line">Input: votes &#x3D; [&quot;ZMNAGUEDSJYLBOPHRQICWFXTVK&quot;]</span><br><span class="line">Output: &quot;ZMNAGUEDSJYLBOPHRQICWFXTVK&quot;</span><br><span class="line">Explanation: Only one voter so his votes are used for the ranking.</span><br><span class="line"></span><br><span class="line">Input: votes &#x3D; [&quot;BCA&quot;,&quot;CAB&quot;,&quot;CBA&quot;,&quot;ABC&quot;,&quot;ACB&quot;,&quot;BAC&quot;]</span><br><span class="line">Output: &quot;ABC&quot;</span><br><span class="line">Explanation: </span><br><span class="line">Team A was ranked first by 2 voters, second by 2 voters and third by 2 voters.</span><br><span class="line">Team B was ranked first by 2 voters, second by 2 voters and third by 2 voters.</span><br><span class="line">Team C was ranked first by 2 voters, second by 2 voters and third by 2 voters.</span><br><span class="line">There is a tie and we rank teams ascending by their IDs.</span><br><span class="line"></span><br><span class="line">Input: votes &#x3D; [&quot;M&quot;,&quot;M&quot;,&quot;M&quot;,&quot;M&quot;]</span><br><span class="line">Output: &quot;M&quot;</span><br><span class="line">Explanation: Only team M in the competition so it has the first rank.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>We record the positions of each character and then we use customized sort for these characters. The way to solve it is so brilliant!</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(len log (len)) space:O(n)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">rankTeams</span><span class="params">(String[] votes)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;Character, <span class="keyword">int</span>[]&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> len = votes[<span class="number">0</span>].length();</span><br><span class="line">        <span class="comment">// mark the location of each character.</span></span><br><span class="line">        <span class="keyword">for</span> (String vote : votes) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">                <span class="keyword">char</span> ch = vote.charAt(i);</span><br><span class="line">                map.putIfAbsent(ch, <span class="keyword">new</span> <span class="keyword">int</span>[len]);</span><br><span class="line">                map.get(ch)[i]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        List&lt;Character&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;(map.keySet());</span><br><span class="line">        Collections.sort(list, (a, b) -&gt; &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (map.get(a)[i] != map.get(b)[i]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> map.get(b)[i] - map.get(a)[i];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// if all of character occurs same.</span></span><br><span class="line">            <span class="keyword">return</span> a - b;</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> ch : list) sb.append(ch);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/01/1366-rank-teams-by-votes/" data-id="cki58ajqw000xodw494vd1mgq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1365-how-many-numbers-are-smaller-than-the-current-number" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/01/1365-how-many-numbers-are-smaller-than-the-current-number/" class="article-date">
-  <time datetime="2020-03-01T16:33:30.000Z" itemprop="datePublished">2020-03-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="https://www.linkedin.com/in/xingyu-long-b80613168/">
+            <i class="fab fa-linkedin"></i><!--
+      ---></a><!--
+    ---><!--
+    ---> and 
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/01/1365-how-many-numbers-are-smaller-than-the-current-number/">LeetCode 1365. How Many Numbers Are Smaller Than the Current Number</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given the array <code>nums</code>, for each <code>nums[i]</code> find out how many numbers in the array are smaller than it. That is, for each <code>nums[i]</code> you have to count the number of valid <code>j&#39;s</code> such that <code>j != i</code> <strong>and</strong> <code>nums[j] &lt; nums[i]</code>.</p>
-<p>Return the answer in an array.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [8,1,2,2,3]</span><br><span class="line">Output: [4,0,1,1,3]</span><br><span class="line">Explanation: </span><br><span class="line">For nums[0]&#x3D;8 there exist four smaller numbers than it (1, 2, 2 and 3). </span><br><span class="line">For nums[1]&#x3D;1 does not exist any smaller number than it.</span><br><span class="line">For nums[2]&#x3D;2 there exist one smaller number than it (1). </span><br><span class="line">For nums[3]&#x3D;2 there exist one smaller number than it (1). </span><br><span class="line">For nums[4]&#x3D;3 there exist three smaller numbers than it (1, 2 and 2).</span><br><span class="line"></span><br><span class="line">Input: nums &#x3D; [6,5,4,8]</span><br><span class="line">Output: [2,1,0,3]</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>It’s a sorting question. We have to know the position of each element in array. So, first method I used would be sort it and used HashMap to track the relationship. In addition, we can use bucket sort to reduce the time complexity.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(nlogn) space:O(n)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] smallerNumbersThanCurrent(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">int</span>[] copy = nums.clone();</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        Arrays.sort(copy);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!map.containsKey(copy[i])) </span><br><span class="line">                map.put(copy[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            res[i] = map.get(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// bucket sort + prefix Sum</span></span><br><span class="line">    <span class="comment">// time:O(n) space:O(1)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] smallerNumbersThanCurrent2(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">int</span> size = <span class="number">100</span>;</span><br><span class="line">        <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[size + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) count[num]++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= size; i++) &#123;</span><br><span class="line">            count[i] += count[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (nums[i] - <span class="number">1</span> &gt;= <span class="number">0</span>)  </span><br><span class="line">                res[i] = count[nums[i] - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/01/1365-how-many-numbers-are-smaller-than-the-current-number/" data-id="cki58ajqw000vodw41pvk0wdo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bucket-Sort/" rel="tag">Bucket Sort</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Easy/" rel="tag">Easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1359-count-all-valid-pickup-and-delivery-options" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/22/1359-count-all-valid-pickup-and-delivery-options/" class="article-date">
-  <time datetime="2020-02-22T23:22:39.000Z" itemprop="datePublished">2020-02-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/22/1359-count-all-valid-pickup-and-delivery-options/">LeetCode 1359. Count All Valid Pickup and Delivery Options</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given <code>n</code> orders, each order consist in pickup and delivery services. </p>
-<p>Count all valid pickup/delivery possible sequences such that delivery(i) is always after of pickup(i). </p>
-<p>Since the answer may be too large, return it modulo 10^9 + 7.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Input: n &#x3D; 1</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: Unique order (P1, D1), Delivery 1 always is after of Pickup 1.</span><br><span class="line"></span><br><span class="line">Input: n &#x3D; 2</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: All possible orders: </span><br><span class="line">(P1,P2,D1,D2), (P1,P2,D2,D1), (P1,D1,P2,D2), (P2,P1,D1,D2), (P2,P1,D2,D1) and (P2,D2,P1,D1).</span><br><span class="line">This is an invalid order (P1,D2,P2,D1) because Pickup 2 is after of Delivery 2.</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>We assumed it already have <code>n - 1</code> pair, and we have to place the final pair. The number of we can place is <code>2 * (n - 1) + 1 = 2*n - 1</code>, so for the last, it should be <code>2 * n</code>, which add one more section we can use due to the operation.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(n), space:O(1)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countOrders</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> mod = (<span class="keyword">int</span>) Math.pow(<span class="number">10</span>, <span class="number">9</span>) + <span class="number">7</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            res = res * (<span class="number">2</span> * i - <span class="number">1</span>) * i % mod;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/22/1359-count-all-valid-pickup-and-delivery-options/" data-id="cki58ajqu000sodw4g7u89tpn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Biweekly-Contest/" rel="tag">Biweekly Contest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Feb-2020/" rel="tag">Feb 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hard/" rel="tag">Hard</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1358-number-of-substrings-containing-all-three-characters" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/22/1358-number-of-substrings-containing-all-three-characters/" class="article-date">
-  <time datetime="2020-02-22T23:11:40.000Z" itemprop="datePublished">2020-02-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <a class="icon" target="_blank" rel="noopener" href="mailto:xingyu.long.97@gmail.com">
+            <i class="fas fa-envelope"></i><!--
+      ---></a><!--
+      ---><!--
+    --->.
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/22/1358-number-of-substrings-containing-all-three-characters/">LeetCdoe 1358. Number of Substrings Containing All Three Characters</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>Given a string <code>s</code> consisting only of characters <em>a</em>, <em>b</em> and <em>c</em>.</p>
-<p>Return the number of substrings containing <strong>at least</strong> one occurrence of all these characters <em>a</em>, <em>b</em> and <em>c</em>.</p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: s &#x3D; &quot;abcabc&quot;</span><br><span class="line">Output: 10</span><br><span class="line">Explanation: The substrings containing at least one occurrence of the characters a, b and c are &quot;abc&quot;, &quot;abca&quot;, &quot;abcab&quot;, &quot;abcabc&quot;, &quot;bca&quot;, &quot;bcab&quot;, &quot;bcabc&quot;, &quot;cab&quot;, &quot;cabc&quot; and &quot;abc&quot; (again). </span><br><span class="line"></span><br><span class="line">Input: s &#x3D; &quot;aaacb&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The substrings containing at least one occurrence of the characters a, b and c are &quot;aaacb&quot;, &quot;aacb&quot; and &quot;acb&quot;. </span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>It’s a sliding window question, but how to count the qualified string is the key. If we meet the requirement, the number of it would be <code>n - end</code>, which stands for string ends from end pointer to length of string. For example,<code>abcabc</code>, when we go the first char c, the number should be <code>abc, abca, abcab, abcabc; total = 4</code> . Also, we use count array to record if it meets the requirement.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time:O(n), space:O(1)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numberOfSubstrings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> n = s.length();</span><br><span class="line">        <span class="keyword">while</span> (end &lt; n) &#123;</span><br><span class="line">            count[s.charAt(end) - <span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">            <span class="keyword">while</span> (count[<span class="number">0</span>] &gt; <span class="number">0</span> &amp;&amp; count[<span class="number">1</span>] &gt; <span class="number">0</span> &amp;&amp; count[<span class="number">2</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                res += n - end; </span><br><span class="line">                count[s.charAt(start) - <span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">                start++;</span><br><span class="line">            &#125;</span><br><span class="line">            end++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/22/1358-number-of-substrings-containing-all-three-characters/" data-id="cki58ajqt000qodw44zap0o8p" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Biweekly-Contest/" rel="tag">Biweekly Contest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Feb-2020/" rel="tag">Feb 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sliding-Window/" rel="tag">Sliding Window</a></li></ul>
-
-    </footer>
-  </div>
+    </p>
   
-</article>
-
-
-  
-    <article id="post-1357-apply-discount-every-n-orders" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/22/1357-apply-discount-every-n-orders/" class="article-date">
-  <time datetime="2020-02-22T22:55:01.000Z" itemprop="datePublished">2020-02-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/22/1357-apply-discount-every-n-orders/">LeetCode 1357. Apply Discount Every n Orders</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><p>There is a sale in a supermarket, there will be a <code>discount</code> every <code>n</code> customer.<br>There are some products in the supermarket where the id of the <code>i-th</code> product is <code>products[i]</code> and the price per unit of this product is <code>prices[i]</code>.<br>The system will count the number of customers and when the <code>n-th</code> customer arrive he/she will have a <code>discount</code> on the bill. (i.e if the cost is <code>x</code> the new cost is <code>x - (discount * x) / 100</code>). Then the system will start counting customers again.<br>The customer orders a certain amount of each product where <code>product[i]</code> is the id of the <code>i-th</code> product the customer ordered and <code>amount[i]</code> is the number of units the customer ordered of that product.</p>
-<p>Implement the <code>Cashier</code> class:</p>
-<ul>
-<li><code>Cashier(int n, int discount, int[] products, int[] prices)</code> Initializes the object with <code>n</code>, the <code>discount</code>, the <code>products</code> and their <code>prices</code>.</li>
-<li><code>double getBill(int[] product, int[] amount)</code> returns the value of the bill and apply the discount if needed. Answers within <code>10^-5</code> of the actual value will be accepted as correct.</li>
-</ul>
-<p>You can check the <a target="_blank" rel="noopener" href="https://leetcode.com/problems/apply-discount-every-n-orders/">official leetcode website</a></p>
-<p><strong>Example</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Input</span><br><span class="line">[&quot;Cashier&quot;,&quot;getBill&quot;,&quot;getBill&quot;,&quot;getBill&quot;,&quot;getBill&quot;,&quot;getBill&quot;,&quot;getBill&quot;,&quot;getBill&quot;]</span><br><span class="line">[[3,50,[1,2,3,4,5,6,7],[100,200,300,400,300,200,100]],[[1,2],[1,2]],[[3,7],[10,10]],[[1,2,3,4,5,6,7],[1,1,1,1,1,1,1]],[[4],[10]],[[7,3],[10,10]],[[7,5,3,1,6,4,2],[10,10,10,9,9,9,7]],[[2,3,5],[5,3,2]]]</span><br><span class="line">Output</span><br><span class="line">[null,500.0,4000.0,800.0,4000.0,4000.0,7350.0,2500.0]</span><br><span class="line">Explanation</span><br><span class="line">Cashier cashier &#x3D; new Cashier(3,50,[1,2,3,4,5,6,7],[100,200,300,400,300,200,100]);</span><br><span class="line">cashier.getBill([1,2],[1,2]);                        &#x2F;&#x2F; return 500.0, bill &#x3D; 1 * 100 + 2 * 200 &#x3D; 500.</span><br><span class="line">cashier.getBill([3,7],[10,10]);                      &#x2F;&#x2F; return 4000.0</span><br><span class="line">cashier.getBill([1,2,3,4,5,6,7],[1,1,1,1,1,1,1]);    &#x2F;&#x2F; return 800.0, The bill was 1600.0 but as this is the third customer, he has a discount of 50% which means his bill is only 1600 - 1600 * (50 &#x2F; 100) &#x3D; 800.</span><br><span class="line">cashier.getBill([4],[10]);                           &#x2F;&#x2F; return 4000.0</span><br><span class="line">cashier.getBill([7,3],[10,10]);                      &#x2F;&#x2F; return 4000.0</span><br><span class="line">cashier.getBill([7,5,3,1,6,4,2],[10,10,10,9,9,9,7]); &#x2F;&#x2F; return 7350.0, Bill was 14700.0 but as the system counted three more customers, he will have a 50% discount and the bill becomes 7350.0</span><br><span class="line">cashier.getBill([2,3,5],[5,3,2]);                    &#x2F;&#x2F; return 2500.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>It needs you to read more carefully, and we only need to keep tracking the relationship between <strong>productID</strong> and <strong>Price</strong>. Also, we need to pay attention when we give the low price (the value of <strong>n</strong>).</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// time: O(n), space:O(n)</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">int</span> count;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> dis;</span><br><span class="line">    <span class="keyword">public</span> HashMap&lt;Integer, Integer&gt; map;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Cashier</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> discount, <span class="keyword">int</span>[] products, <span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">this</span>.n = n;</span><br><span class="line">        dis = discount;</span><br><span class="line">        map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; products.length; i++) &#123;</span><br><span class="line">            map.put(products[i], prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getBill</span><span class="params">(<span class="keyword">int</span>[] product, <span class="keyword">int</span>[] amount)</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">double</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; product.length; i++) &#123;</span><br><span class="line">            res += map.get(product[i]) * amount[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (count % n == <span class="number">0</span>) <span class="keyword">return</span> res - res * (dis) / <span class="number">100</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/22/1357-apply-discount-every-n-orders/" data-id="cki58ajqr000oodw44xqlfqxz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Biweekly-Contest/" rel="tag">Biweekly Contest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/" rel="tag">Design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Feb-2020/" rel="tag">Feb 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
-  </nav>
-
 </section>
+
+<section id="writing">
+  <span class="h1"><a href="/archives">Writing</a></span>
+  
+  <span class="h2">Topics</span>
+  <span class="widget tagcloud">
+    <a href="/tags/0-1-Knapsack-Problem/" style="font-size: 10px;">0-1 Knapsack Problem</a> <a href="/tags/Add-Operation/" style="font-size: 10px;">Add Operation</a> <a href="/tags/Airbnb/" style="font-size: 11.05px;">Airbnb</a> <a href="/tags/Amazon/" style="font-size: 10.53px;">Amazon</a> <a href="/tags/Array/" style="font-size: 13.68px;">Array</a> <a href="/tags/BFS/" style="font-size: 11.58px;">BFS</a> <a href="/tags/BST/" style="font-size: 10px;">BST</a> <a href="/tags/Backtracking/" style="font-size: 10px;">Backtracking</a> <a href="/tags/Binary-Search/" style="font-size: 10.53px;">Binary Search</a> <a href="/tags/Binary-Search-Tree/" style="font-size: 10px;">Binary Search Tree</a> <a href="/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/tags/Bit-Manipulation/" style="font-size: 10.53px;">Bit Manipulation</a> <a href="/tags/Biweekly-Contest/" style="font-size: 14.74px;">Biweekly Contest</a> <a href="/tags/Bucket-Sort/" style="font-size: 10px;">Bucket Sort</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Daily-Coding-Problem/" style="font-size: 19.47px;">Daily Coding Problem</a> <a href="/tags/Dec-2019/" style="font-size: 14.21px;">Dec 2019</a> <a href="/tags/Design/" style="font-size: 10px;">Design</a> <a href="/tags/Dropbox/" style="font-size: 10.53px;">Dropbox</a> <a href="/tags/Dynamic-Programming/" style="font-size: 16.84px;">Dynamic Programming</a> <a href="/tags/Easy/" style="font-size: 15.79px;">Easy</a> <a href="/tags/Facebook/" style="font-size: 11.05px;">Facebook</a> <a href="/tags/Feb-2020/" style="font-size: 17.89px;">Feb 2020</a> <a href="/tags/Google/" style="font-size: 12.63px;">Google</a> <a href="/tags/Graph/" style="font-size: 11.05px;">Graph</a> <a href="/tags/Greedy/" style="font-size: 12.11px;">Greedy</a> <a href="/tags/Hard/" style="font-size: 15.26px;">Hard</a> <a href="/tags/HashMap/" style="font-size: 13.16px;">HashMap</a> <a href="/tags/Jan-2020/" style="font-size: 17.37px;">Jan 2020</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/LinkedList/" style="font-size: 11.05px;">LinkedList</a> <a href="/tags/Mar-2020/" style="font-size: 18.42px;">Mar 2020</a> <a href="/tags/Math/" style="font-size: 11.05px;">Math</a> <a href="/tags/Matrix/" style="font-size: 12.11px;">Matrix</a> <a href="/tags/Medium/" style="font-size: 18.95px;">Medium</a> <a href="/tags/Microsoft/" style="font-size: 10.53px;">Microsoft</a> <a href="/tags/Oct-2020/" style="font-size: 11.05px;">Oct 2020</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Prefix/" style="font-size: 10.53px;">Prefix</a> <a href="/tags/Prefix-Sum/" style="font-size: 10px;">Prefix Sum</a> <a href="/tags/Priority-Queue/" style="font-size: 12.11px;">Priority Queue</a> <a href="/tags/Quora/" style="font-size: 10px;">Quora</a> <a href="/tags/Sliding-Window/" style="font-size: 12.11px;">Sliding Window</a> <a href="/tags/Sort/" style="font-size: 10.53px;">Sort</a> <a href="/tags/Sorting/" style="font-size: 12.11px;">Sorting</a> <a href="/tags/Stack/" style="font-size: 10px;">Stack</a> <a href="/tags/String/" style="font-size: 12.11px;">String</a> <a href="/tags/Stripe/" style="font-size: 10px;">Stripe</a> <a href="/tags/Top-Down/" style="font-size: 10px;">Top-Down</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/Twitter/" style="font-size: 10.53px;">Twitter</a> <a href="/tags/Two-Pointer/" style="font-size: 10.53px;">Two Pointer</a> <a href="/tags/Uber/" style="font-size: 11.05px;">Uber</a> <a href="/tags/Weekly-Contest/" style="font-size: 16.32px;">Weekly Contest</a> <a href="/tags/postorder/" style="font-size: 10.53px;">postorder</a> <a href="/tags/preorder/" style="font-size: 10.53px;">preorder</a>
+  </span>
+  <span class="h2">Most recent</span>
+  
+  <ul class="post-list">
+    
+    
+      
+    
+    
+      <li class="post-item">
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/0-1-Knapsack-Problem/" rel="tag">0-1 Knapsack Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Add-Operation/" rel="tag">Add Operation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Airbnb/" rel="tag">Airbnb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Amazon/" rel="tag">Amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Array/" rel="tag">Array</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/" rel="tag">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BST/" rel="tag">BST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backtracking/" rel="tag">Backtracking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Search/" rel="tag">Binary Search</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Search-Tree/" rel="tag">Binary Search Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Binary-Tree/" rel="tag">Binary Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bit-Manipulation/" rel="tag">Bit Manipulation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Biweekly-Contest/" rel="tag">Biweekly Contest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bucket-Sort/" rel="tag">Bucket Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Daily-Coding-Problem/" rel="tag">Daily Coding Problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dec-2019/" rel="tag">Dec 2019</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/" rel="tag">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dropbox/" rel="tag">Dropbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dynamic-Programming/" rel="tag">Dynamic Programming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Easy/" rel="tag">Easy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Facebook/" rel="tag">Facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Feb-2020/" rel="tag">Feb 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Graph/" rel="tag">Graph</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Greedy/" rel="tag">Greedy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hard/" rel="tag">Hard</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jan-2020/" rel="tag">Jan 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mar-2020/" rel="tag">Mar 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matrix/" rel="tag">Matrix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Medium/" rel="tag">Medium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Microsoft/" rel="tag">Microsoft</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oct-2020/" rel="tag">Oct 2020</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Palindrome/" rel="tag">Palindrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Prefix/" rel="tag">Prefix</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Prefix-Sum/" rel="tag">Prefix Sum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Priority-Queue/" rel="tag">Priority Queue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quora/" rel="tag">Quora</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sliding-Window/" rel="tag">Sliding Window</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sorting/" rel="tag">Sorting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stack/" rel="tag">Stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stripe/" rel="tag">Stripe</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Top-Down/" rel="tag">Top-Down</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/" rel="tag">Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Twitter/" rel="tag">Twitter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Two-Pointer/" rel="tag">Two Pointer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Uber/" rel="tag">Uber</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Weekly-Contest/" rel="tag">Weekly Contest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postorder/" rel="tag">postorder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/preorder/" rel="tag">preorder</a></li></ul>
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-18T15:45:23.000Z" itemprop="datePublished">2020-10-18</time>
+        
+      
     </div>
-  </div>
 
 
-  
+        <span>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/0-1-Knapsack-Problem/" style="font-size: 10px;">0-1 Knapsack Problem</a> <a href="/tags/Add-Operation/" style="font-size: 10px;">Add Operation</a> <a href="/tags/Airbnb/" style="font-size: 11.05px;">Airbnb</a> <a href="/tags/Amazon/" style="font-size: 10.53px;">Amazon</a> <a href="/tags/Array/" style="font-size: 13.68px;">Array</a> <a href="/tags/BFS/" style="font-size: 11.58px;">BFS</a> <a href="/tags/BST/" style="font-size: 10px;">BST</a> <a href="/tags/Backtracking/" style="font-size: 10px;">Backtracking</a> <a href="/tags/Binary-Search/" style="font-size: 10.53px;">Binary Search</a> <a href="/tags/Binary-Search-Tree/" style="font-size: 10px;">Binary Search Tree</a> <a href="/tags/Binary-Tree/" style="font-size: 10px;">Binary Tree</a> <a href="/tags/Bit-Manipulation/" style="font-size: 10.53px;">Bit Manipulation</a> <a href="/tags/Biweekly-Contest/" style="font-size: 14.74px;">Biweekly Contest</a> <a href="/tags/Bucket-Sort/" style="font-size: 10px;">Bucket Sort</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Daily-Coding-Problem/" style="font-size: 19.47px;">Daily Coding Problem</a> <a href="/tags/Dec-2019/" style="font-size: 14.21px;">Dec 2019</a> <a href="/tags/Design/" style="font-size: 10px;">Design</a> <a href="/tags/Dropbox/" style="font-size: 10.53px;">Dropbox</a> <a href="/tags/Dynamic-Programming/" style="font-size: 16.84px;">Dynamic Programming</a> <a href="/tags/Easy/" style="font-size: 15.79px;">Easy</a> <a href="/tags/Facebook/" style="font-size: 11.05px;">Facebook</a> <a href="/tags/Feb-2020/" style="font-size: 17.89px;">Feb 2020</a> <a href="/tags/Google/" style="font-size: 12.63px;">Google</a> <a href="/tags/Graph/" style="font-size: 11.05px;">Graph</a> <a href="/tags/Greedy/" style="font-size: 12.11px;">Greedy</a> <a href="/tags/Hard/" style="font-size: 15.26px;">Hard</a> <a href="/tags/HashMap/" style="font-size: 13.16px;">HashMap</a> <a href="/tags/Jan-2020/" style="font-size: 17.37px;">Jan 2020</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/LinkedList/" style="font-size: 11.05px;">LinkedList</a> <a href="/tags/Mar-2020/" style="font-size: 18.42px;">Mar 2020</a> <a href="/tags/Math/" style="font-size: 11.05px;">Math</a> <a href="/tags/Matrix/" style="font-size: 12.11px;">Matrix</a> <a href="/tags/Medium/" style="font-size: 18.95px;">Medium</a> <a href="/tags/Microsoft/" style="font-size: 10.53px;">Microsoft</a> <a href="/tags/Oct-2020/" style="font-size: 11.05px;">Oct 2020</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Prefix/" style="font-size: 10.53px;">Prefix</a> <a href="/tags/Prefix-Sum/" style="font-size: 10px;">Prefix Sum</a> <a href="/tags/Priority-Queue/" style="font-size: 12.11px;">Priority Queue</a> <a href="/tags/Quora/" style="font-size: 10px;">Quora</a> <a href="/tags/Sliding-Window/" style="font-size: 12.11px;">Sliding Window</a> <a href="/tags/Sort/" style="font-size: 10.53px;">Sort</a> <a href="/tags/Sorting/" style="font-size: 12.11px;">Sorting</a> <a href="/tags/Stack/" style="font-size: 10px;">Stack</a> <a href="/tags/String/" style="font-size: 12.11px;">String</a> <a href="/tags/Stripe/" style="font-size: 10px;">Stripe</a> <a href="/tags/Top-Down/" style="font-size: 10px;">Top-Down</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/Twitter/" style="font-size: 10.53px;">Twitter</a> <a href="/tags/Two-Pointer/" style="font-size: 10.53px;">Two Pointer</a> <a href="/tags/Uber/" style="font-size: 11.05px;">Uber</a> <a href="/tags/Weekly-Contest/" style="font-size: 16.32px;">Weekly Contest</a> <a href="/tags/postorder/" style="font-size: 10.53px;">postorder</a> <a href="/tags/preorder/" style="font-size: 10.53px;">preorder</a>
+        <a class="" href="/2020/10/18/1541-Minimum-Insertions-to-Balance-a-Parentheses-String/">LeetCode 1541. Minimum Insertions to Balance a Parentheses String</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-15T02:20:03.000Z" itemprop="datePublished">2020-10-14</time>
+        
+      
     </div>
-  </div>
 
-  
+
+        <span>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+        <a class="" href="/2020/10/14/1616-Split-Two-Strings-to-Make-Palindrome/">LeetCode 1616. Split Two Strings to Make Palindrome</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-12T02:08:51.000Z" itemprop="datePublished">2020-10-11</time>
+        
+      
     </div>
-  </div>
 
 
-  
+        <span>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
+        <a class="" href="/2020/10/11/1615-Maximal-Network-Rank/">LeetCode 1615. Maximal Network Rank</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-10-11T01:11:58.000Z" itemprop="datePublished">2020-10-10</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2020/10/10/667-Beautiful-Arrangement-II/">LeetCode 667. Beautiful Arrangement II</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2020-03-24T17:30:43.000Z" itemprop="datePublished">2020-03-24</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2020/03/24/1387-sort-integers-by-the-power-value/">LeetCode 1387. Sort Integers by The Power Value</a>
+    
+
+
+</span>
+      </li>
+    
+  </ul>
+  
+</section>
+
+
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Clark
+  </div>
+  <div class="footer-right">
+    <nav>
       <ul>
-        
-          <li>
-            <a href="/2020/10/18/1541-Minimum-Insertions-to-Balance-a-Parentheses-String/">LeetCode 1541. Minimum Insertions to Balance a Parentheses String</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/14/1616-Split-Two-Strings-to-Make-Palindrome/">LeetCode 1616. Split Two Strings to Make Palindrome</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/11/1615-Maximal-Network-Rank/">LeetCode 1615. Maximal Network Rank</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/10/667-Beautiful-Arrangement-II/">LeetCode 667. Beautiful Arrangement II</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/24/1387-sort-integers-by-the-power-value/">LeetCode 1387. Sort Integers by The Power Value</a>
-          </li>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/other/">Other</a></li>
         
       </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    </nav>
   </div>
 </footer>
+
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    <!-- styles -->
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
 
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
 
 
-<script src="/js/script.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
 
 
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
 
 
-  </div>
 </body>
 </html>
